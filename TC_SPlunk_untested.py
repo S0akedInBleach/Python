@@ -1,3 +1,8 @@
+#capture user tags for TC, and filename for lookup in splunk
+#api calls to TC, pipe results to splunk
+#untested, written by openpilot and chatGPT
+#potential failures, too many results, unable to pivot from TC to Splunk properly 
+
 import os
 import requests
 import datetime
