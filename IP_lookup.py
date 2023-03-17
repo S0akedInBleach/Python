@@ -1,10 +1,15 @@
-#Capture an IP from a user as a variable
-ip_addr = input("Enter an IP address: ")
+#Capture an IP from a user as a variable in a GUI as ip_addr
 
-#insert ip_addr into urls 
+import tkinter as tk
+from tkinter import simpledialog
+import webbrowser
 
-urls = [
-    "https://www.abuseipdb.com/check/$ip_addr"
+#Capture an IP from a user as a variable in a GUI as ip_addr
+root = tk.Tk()
+root.withdraw()
+ip_addr = simpledialog.askstring(title="IP Lookup", prompt="Enter an IP address to lookup:")
+print(ip_addr)
+
 
 #insert ip_addr into urls
 
@@ -25,3 +30,4 @@ urls = [
 #open urls in new Edge window
 for url in urls:
     webbrowser.open_new_tab(url)
+    
